@@ -1,4 +1,4 @@
-package projetos_simples.Geometria_Espacial;
+package Matematica_Assuntos.Geometria_Espacial;
 import java.util.Scanner;
 
 public class piramide {

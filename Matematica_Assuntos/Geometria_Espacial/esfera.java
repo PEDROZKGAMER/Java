@@ -1,4 +1,4 @@
-package projetos_simples.Geometria_Espacial;
+package Matematica_Assuntos.Geometria_Espacial;
 import java.util.Scanner;
 import java.lang.Math;
 
@@ -14,6 +14,7 @@ public class esfera {
             double raio = input.nextDouble();
             double area = 4 * (3.14 * (raio * raio));
             System.out.printf("A área da esfera é: %.2f", area);
+        
         }else if(formula.equals("V")){
             System.out.print("Informe o raio da esfera: ");
             double raio = input.nextDouble();
