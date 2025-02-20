@@ -3,18 +3,18 @@ import java.util.Scanner;
 public class exercicios {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
+        try{
         System.out.print("Informe qual questão queira exemplo '1, 2, 3, 4, 5... 22': ");
         int questao = input.nextInt();
 
-        if(questao < 0 || questao > 22){
+        if(questao < 1 || questao > 22){
         System.out.print("Erro, questão inválida! programa encerrado.");
         input.close();
-    }else if(questao == 0){
-        System.out.println("0 - Escreva um algoritmo que armazene o valor 10 em uma variável A e o valor 20 em uma variável B. A seguir troque os seus conteúdos fazendo com que o valor que está em A passe para B e vice-versa. Ao final, escrever os valores que ficaram armazenados nas variáveis.\r");
-        System.out.println("Em manuteção!");
     }else if(questao == 1){
-            System.out.println("1 - Faça um algoritmo que leia os valores de A, B, C e em seguida imprima na tela a soma entre A e B e mostre se a soma é menor que C.");
+        System.out.println("1 - Escreva um algoritmo que armazene o valor 10 em uma variável A e o valor 20 em uma variável B. A seguir troque os seus conteúdos fazendo com que o valor que está em A passe para B e vice-versa. Ao final, escrever os valores que ficaram armazenados nas variáveis.\r");
+        System.out.println("Em manuteção!");
+    }else if(questao == 2){
+            System.out.println("2 - Faça um algoritmo que leia os valores de A, B, C e em seguida imprima na tela a soma entre A e B e mostre se a soma é menor que C.");
             System.out.print("Informe o valor de A: ");
             int valor_a = input.nextInt();
 
@@ -31,8 +31,8 @@ public class exercicios {
             }else{
                 System.out.print("O resultado é menor que o valor c, pois resultado = "+resultado+", Valor c = "+valor_c);
             }
-        }else if(questao == 2){
-            System.out.println("2 - Faça um algoritmo para receber um número qualquer e imprimir na tela se o número é par ou ímpar, positivo ou negativo.");
+        }else if(questao == 3){
+            System.out.println("3 - Faça um algoritmo para receber um número qualquer e imprimir na tela se o número é par ou ímpar, positivo ou negativo.");
             System.out.print("Informe o valor: ");
             int numero = input.nextInt();
 
@@ -47,8 +47,8 @@ public class exercicios {
             }else{
                 System.out.print(" e negativo");
             }
-        }else if(questao == 3){
-            System.out.println("3 - Faça um algoritmo que leia dois valores inteiros A e B, se os valores de A e B forem iguais, deverá somar os dois valores, caso contrário devera multiplicar A por B. Ao final de qualquer um dos cálculos deve-se atribuir o resultado a uma variável C e imprimir seu valor na tela.");
+        }else if(questao == 4){
+            System.out.println("4 - Faça um algoritmo que leia dois valores inteiros A e B, se os valores de A e B forem iguais, deverá somar os dois valores, caso contrário devera multiplicar A por B. Ao final de qualquer um dos cálculos deve-se atribuir o resultado a uma variável C e imprimir seu valor na tela.");
             System.out.print("informe o valor de a: ");
             int numero1 = input.nextInt();
 
@@ -60,8 +60,8 @@ public class exercicios {
             }else{
                 System.out.print("O resultado de c é: "+numero1 * numero2);
             }
-        }else if(questao == 4){
-            System.out.println("4 - Faça um algoritmo que receba um número inteiro e imprima na tela o seu antecessor e o seu sucessor");
+        }else if(questao == 5){
+            System.out.println("5 - Faça um algoritmo que receba um número inteiro e imprima na tela o seu antecessor e o seu sucessor");
             System.out.print("Informe o numero: ");
             int numero = input.nextInt();
 
@@ -69,8 +69,8 @@ public class exercicios {
             int sucessor = numero + 1;
 
             System.out.print(antecessor +" <==> "+numero+" <==> "+sucessor);
-        }else if(questao == 5){
-            System.out.println("5 - Faça um algoritmo que leia o valor do salário mínimo e o valor do salário de um usuário, calcule quantos salários mínimos esse usuário ganha e imprima na tela o resultado. (Base para o Salário mínimo R$1.293,20).");
+        }else if(questao == 6){
+            System.out.println("6 - Faça um algoritmo que leia o valor do salário mínimo e o valor do salário de um usuário, calcule quantos salários mínimos esse usuário ganha e imprima na tela o resultado. (Base para o Salário mínimo R$1.293,20).");
             System.out.print("Olá, informe seu nome: ");
             String nome_usuario = input.next();
 
@@ -83,16 +83,16 @@ public class exercicios {
             double salario = salario_usuario / salario_minino ;
 
             System.out.printf(nome_usuario+ ", o seu salario é R$ %.3f: ",salario);
-        }else if(questao == 6){
-            System.out.println("6 - Faça um algoritmo que leia um valor qualquer e imprima na tela com um reajuste de 5%.");
+        }else if(questao == 7){
+            System.out.println("7 - Faça um algoritmo que leia um valor qualquer e imprima na tela com um reajuste de 5%.");
             System.out.print("Informe o numero: ");
             double numero = input.nextDouble();
 
             double reajuste = numero * 0.05;
 
             System.out.print(reajuste);
-        }else if(questao == 7){
-            System.out.println("7 - Faça um algoritmo que leia dois valores booleanos (lógicos) e determine se ambos são VERDADEIRO ou FALSO.");
+        }else if(questao == 8){
+            System.out.println("8 - Faça um algoritmo que leia dois valores booleanos (lógicos) e determine se ambos são VERDADEIRO ou FALSO.");
             System.out.print("Informe o 1° valor: ");
             boolean numero_1 = input.hasNextBoolean();
 
@@ -104,8 +104,8 @@ public class exercicios {
             }else{
                 System.out.print("Falso");
             }
-        }else if(questao == 8){
-            System.out.println("8 - Faça um algoritmo que leia três valores inteiros diferentes e imprima na tela os valores em ordem decrescente.");
+        }else if(questao == 9){
+            System.out.println("9 - Faça um algoritmo que leia três valores inteiros diferentes e imprima na tela os valores em ordem decrescente.");
             System.out.print("Informe o 1° valor: ");
             int valor_1 = input.nextInt();
 
@@ -134,8 +134,8 @@ public class exercicios {
                     System.out.println(valor_3 + " " + valor_2 + " " + valor_1);
                 }
             }
-        }else if(questao == 9){
-            System.out.println("9 - Faça um algoritmo que calcule o IMC (Índice de Massa Corporal) de uma pessoa, leia o seu peso e sua altura e imprima na tela sua condição de acordo com a tabela abaixo: Fórmula do IMC = peso / (altura) ²\n\nTabela Condições IMC\nAbaixo de 18,5 | Abaixo do peso\nEntre 18,6 e 24,9 | Peso ideal (parabéns)\nEntre 25,0 e 29,9 | Levemente acima do peso\nEntre 30,0 e 34,9 | Obesidade grau I\nEntre 35,0 e 39,9 | Obesidade grau II (severa)\nMaior ou igual a 40 | Obesidade grau III (mórbida)");
+        }else if(questao == 10){
+            System.out.println("10 - Faça um algoritmo que calcule o IMC (Índice de Massa Corporal) de uma pessoa, leia o seu peso e sua altura e imprima na tela sua condição de acordo com a tabela abaixo: Fórmula do IMC = peso / (altura) ²\n\nTabela Condições IMC\nAbaixo de 18,5 | Abaixo do peso\nEntre 18,6 e 24,9 | Peso ideal (parabéns)\nEntre 25,0 e 29,9 | Levemente acima do peso\nEntre 30,0 e 34,9 | Obesidade grau I\nEntre 35,0 e 39,9 | Obesidade grau II (severa)\nMaior ou igual a 40 | Obesidade grau III (mórbida)");
             System.out.print("Informe seu peso: ");
             double peso = input.nextDouble();
 
@@ -157,9 +157,8 @@ public class exercicios {
         }else{
             System.out.print("Obesidade grau 3");
         }
-        }else if(questao == 10){
-            System.out.println("Atenção, a questao 10 e a 11 estão juntas!");
-            System.out.println("\n10 - Faça um algoritmo que leia três notas obtidas por um aluno, e imprima na tela a média das notas.\n11 - Faça um algoritmo que leia quatro notas obtidas por um aluno, calcule a média das nota obtidas, imprima na tela o nome do aluno e se o aluno foi aprovado ou reprovado. Para o aluno ser considerado aprovado sua média final deve ser maior ou igual a 7.\r");
+        }else if(questao == 11){
+            System.out.println("\n-Faça um algoritmo que leia três notas obtidas por um aluno, e imprima na tela a média das notas.\n-Faça um algoritmo que leia quatro notas obtidas por um aluno, calcule a média das nota obtidas, imprima na tela o nome do aluno e se o aluno foi aprovado ou reprovado. Para o aluno ser considerado aprovado sua média final deve ser maior ou igual a 7.\r");
 
         System.out.print("Informe seu nome: ");
         String nome = input.next();
@@ -400,6 +399,9 @@ public class exercicios {
         System.out.println("Distância percorrida: " + distancia + " km");
         System.out.println("Quantidade de litros utilizados: " + litrosUtilizados + " litros");
     }
+}catch(java.util.InputMismatchException e){
+    System.out.print("Erro, entrada inválida!");
+}
     input.close();
     }
 }
