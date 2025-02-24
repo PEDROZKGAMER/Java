@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Random;
+import java.time.Year; 
 
 public class exercicios {
     public static void main(String[] args) {
@@ -7,12 +10,20 @@ public class exercicios {
         System.out.print("Informe qual questão queira exemplo '1, 2, 3, 4, 5... 22': ");
         int questao = input.nextInt();
 
-        if(questao < 1 || questao > 22){
+        if(questao < 1 || questao > 23){
         System.out.print("Erro, questão inválida! programa encerrado.");
         input.close();
     }else if(questao == 1){
         System.out.println("1 - Escreva um algoritmo que armazene o valor 10 em uma variável A e o valor 20 em uma variável B. A seguir troque os seus conteúdos fazendo com que o valor que está em A passe para B e vice-versa. Ao final, escrever os valores que ficaram armazenados nas variáveis.\r");
-        System.out.println("Em manuteção!");
+        int valor_A = 10;
+        int valor_B = 20;
+
+        int temporaria = valor_A;
+        valor_A = valor_B;
+        valor_B = temporaria;
+
+        System.out.print(valor_A);
+        System.out.print(valor_B);
     }else if(questao == 2){
             System.out.println("2 - Faça um algoritmo que leia os valores de A, B, C e em seguida imprima na tela a soma entre A e B e mostre se a soma é menor que C.");
             System.out.print("Informe o valor de A: ");
@@ -52,14 +63,15 @@ public class exercicios {
             System.out.print("informe o valor de a: ");
             int numero1 = input.nextInt();
 
-            System.out.print("informe o valor de a: ");
+            System.out.print("informe o valor de b: ");
             int numero2 = input.nextInt();
 
-            if(numero1 == numero2 && numero2 == numero1){
-                System.out.print("O resultado de c é: "+(numero1 + numero2));
-            }else{
-                System.out.print("O resultado de c é: "+numero1 * numero2);
+            if(numero1 == numero2){
+                System.out.println("O resultado de C é: " + (numero1 + numero2));
+            } else {
+                System.out.println("O resultado de C é: " + (numero1 * numero2));
             }
+            
         }else if(questao == 5){
             System.out.println("5 - Faça um algoritmo que receba um número inteiro e imprima na tela o seu antecessor e o seu sucessor");
             System.out.print("Informe o numero: ");
@@ -72,68 +84,58 @@ public class exercicios {
         }else if(questao == 6){
             System.out.println("6 - Faça um algoritmo que leia o valor do salário mínimo e o valor do salário de um usuário, calcule quantos salários mínimos esse usuário ganha e imprima na tela o resultado. (Base para o Salário mínimo R$1.293,20).");
             System.out.print("Olá, informe seu nome: ");
-            String nome_usuario = input.next();
+            String nome_usuario = input.nextLine();
+
 
             System.out.print("Informe o salario mínimo: ");
             double salario_minino = input.nextDouble();
 
-            System.out.print("Informe o seu salario "+ nome_usuario +": ");
+            System.out.print("Informe o seu salario " + nome_usuario + ": ");
             double salario_usuario = input.nextDouble();
 
-            double salario = salario_usuario / salario_minino ;
+            double salario = salario_usuario / salario_minino;
 
-            System.out.printf(nome_usuario+ ", o seu salario é R$ %.3f: ",salario);
+            System.out.printf(nome_usuario + ", o seu salario é R$ %.3f: ", salario);
         }else if(questao == 7){
             System.out.println("7 - Faça um algoritmo que leia um valor qualquer e imprima na tela com um reajuste de 5%.");
             System.out.print("Informe o numero: ");
             double numero = input.nextDouble();
 
             double reajuste = numero * 0.05;
+            double novo_valor = numero + reajuste;
+            System.out.println("O valor com reajuste de 5% é: " + novo_valor);
 
-            System.out.print(reajuste);
         }else if(questao == 8){
             System.out.println("8 - Faça um algoritmo que leia dois valores booleanos (lógicos) e determine se ambos são VERDADEIRO ou FALSO.");
             System.out.print("Informe o 1° valor: ");
-            boolean numero_1 = input.hasNextBoolean();
+            boolean numero_1 = input.nextBoolean();
 
-            System.out.print("Informe o 1° valor: ");
-            boolean numero_2 = input.hasNextBoolean();
+            System.out.print("Informe o 2° valor: ");
+            boolean numero_2 = input.nextBoolean();
 
-            if(numero_1 == numero_2 && numero_2 == numero_1){
-                System.out.print("Verdadeiro");
-            }else{
-                System.out.print("Falso");
+            if (numero_1 == numero_2) {
+                System.out.println("Verdadeiro");
+            } else {
+                System.out.println("Falso");
             }
+            
         }else if(questao == 9){
             System.out.println("9 - Faça um algoritmo que leia três valores inteiros diferentes e imprima na tela os valores em ordem decrescente.");
             System.out.print("Informe o 1° valor: ");
-            int valor_1 = input.nextInt();
+        int valor_1 = input.nextInt();
 
-            System.out.print("Informe o 2° valor: ");
-            int valor_2 = input.nextInt();
+        System.out.print("Informe o 2° valor: ");
+        int valor_2 = input.nextInt();
 
-            System.out.print("Informe o 3° valor: ");
-            int valor_3 = input.nextInt();
+        System.out.print("Informe o 3° valor: ");
+        int valor_3 = input.nextInt();
 
-            if (valor_1 >= valor_2 && valor_1 >= valor_3) {
-                if (valor_2 >= valor_3) {
-                    System.out.println(valor_1 + " " + valor_2 + " " + valor_3);
-                } else {
-                    System.out.println(valor_1 + " " + valor_3 + " " + valor_2);
-                }
-            } else if (valor_2 >= valor_1 && valor_2 >= valor_3) {
-                if (valor_1 >= valor_3) {
-                    System.out.println(valor_2 + " " + valor_1 + " " + valor_3);
-                } else {
-                    System.out.println(valor_2 + " " + valor_3 + " " + valor_1);
-                }
-            } else {
-                if (valor_1 >= valor_2) {
-                    System.out.println(valor_3 + " " + valor_1 + " " + valor_2);
-                } else {
-                    System.out.println(valor_3 + " " + valor_2 + " " + valor_1);
-                }
-            }
+        int[] valores = {valor_1, valor_2, valor_3};
+
+        Arrays.sort(valores);
+
+        System.out.println(valores[2] + " " + valores[1] + " " + valores[0]);
+
         }else if(questao == 10){
             System.out.println("10 - Faça um algoritmo que calcule o IMC (Índice de Massa Corporal) de uma pessoa, leia o seu peso e sua altura e imprima na tela sua condição de acordo com a tabela abaixo: Fórmula do IMC = peso / (altura) ²\n\nTabela Condições IMC\nAbaixo de 18,5 | Abaixo do peso\nEntre 18,6 e 24,9 | Peso ideal (parabéns)\nEntre 25,0 e 29,9 | Levemente acima do peso\nEntre 30,0 e 34,9 | Obesidade grau I\nEntre 35,0 e 39,9 | Obesidade grau II (severa)\nMaior ou igual a 40 | Obesidade grau III (mórbida)");
             System.out.print("Informe seu peso: ");
@@ -157,6 +159,8 @@ public class exercicios {
         }else{
             System.out.print("Obesidade grau 3");
         }
+
+        System.out.printf("Seu IMC é %.2f - ", imc);
         }else if(questao == 11){
             System.out.println("\n-Faça um algoritmo que leia três notas obtidas por um aluno, e imprima na tela a média das notas.\n-Faça um algoritmo que leia quatro notas obtidas por um aluno, calcule a média das nota obtidas, imprima na tela o nome do aluno e se o aluno foi aprovado ou reprovado. Para o aluno ser considerado aprovado sua média final deve ser maior ou igual a 7.\r");
 
@@ -166,8 +170,24 @@ public class exercicios {
         System.out.print("Informe quantas notas: ");
         int quantidade = input.nextInt();
 
-        if(quantidade == 3){
-            System.out.print("Informe a primeira nota: ");
+    if(quantidade == 2){
+        System.out.print("Informe a primeira nota: ");
+        double nota1 = input.nextDouble();
+
+        System.out.print("Informe a segunda nota: ");
+        double nota2 = input.nextDouble();
+
+        double media = (nota1 + nota2) / 2;
+
+        if(media >= 7.0){
+            System.out.printf(nome + " você foi aprovado, pois sua média foi %.2f", media);
+        } else if(media >= 5.0) {
+            System.out.printf(nome + " você ficou na recuperação, pois sua média foi %.2f", media);
+        } else {
+            System.out.printf(nome + " você foi reprovado, pois sua média foi %.2f", media);
+        }        
+    }else if(quantidade == 3){
+        System.out.print("Informe a primeira nota: ");
         double nota1 = input.nextDouble();
 
         System.out.print("Informe a segunda nota: ");
@@ -221,17 +241,17 @@ public class exercicios {
         if(opcao == 1){
             double desconto = preco * 0.15;
             double preco_final = preco - desconto;
-            System.out.printf("O preço final é: %.2f",preco_final);
+            System.out.printf("O preço final a ser pago é: R$ %.2f%n", preco_final);
         }else if(opcao == 2){
             double desconto = preco * 0.10;
             double preco_final = preco - desconto;
-            System.out.printf("O preço final é: %.2f",preco_final);
+            System.out.printf("O preço final a ser pago é: R$ %.2f%n", preco_final);
         }else if(opcao == 3){
             System.out.printf("O preço final é: %.2f",preco);
         }else if(opcao == 4){
             double juros = preco * 0.10;
             double preco_final = preco + juros;
-            System.out.printf("O preço final é: %.2f",preco_final);
+            System.out.printf("O preço final a ser pago é: R$ %.2f%n", preco_final);
         }else{
             System.out.print("Erro, opção inválida!");
         }
@@ -268,7 +288,7 @@ public class exercicios {
         System.out.print("Informe o ano em que você nasceu: ");
         int ano_nascimento = input.nextInt();
 
-        int ano_atual = 2025;
+        int ano_atual = Year.now().getValue();
         int idade_ano = ano_atual - ano_nascimento;
         int idade_meses = idade_ano * 12;
         int idade_dias = idade_ano * 365;
@@ -285,13 +305,17 @@ public class exercicios {
         System.out.print("Informe o 3° lado do triangulo: ");
         double lado3 = input.nextDouble();
 
-        if(lado1 == lado2 && lado2 == lado3){
-            System.out.print("Triangulo equilátero");
-        }else if(lado1 == lado2 || lado2 == lado3 || lado1 == lado3){
-            System.out.print("Triangulo isósceles");
-        }else{
-            System.out.print("Triangulo escaleno");
-        }
+        if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 > lado1) {
+            if(lado1 == lado2 && lado2 == lado3){
+                System.out.print("Triângulo equilátero");
+            }else if(lado1 == lado2 || lado2 == lado3 || lado1 == lado3){
+                System.out.print("Triângulo isósceles");
+            }else{
+                System.out.print("Triângulo escaleno");
+            }
+        } else {
+            System.out.print("Os valores informados não formam um triângulo válido.");
+        }        
     }else if(questao == 17){
         System.out.println("17 - Faça um algoritmo que leia uma temperatura em Fahrenheit e calcule a temperatura correspondente em grau Celsius. Imprima na tela as duas temperaturas.");
         System.out.print("Informe a temperatura em Fahrenheit: ");
@@ -302,16 +326,30 @@ public class exercicios {
 
         if(opcao == 1){
             double celsius = (fahrenheit - 32) * 5 / 9;
-            System.out.printf("A temperatura em Celsius é: %.2f",celsius);
-        }else if(opcao == 2){
+            System.out.printf("%.2f°F equivalem a %.2f°C%n", fahrenheit, celsius);
+        } else if(opcao == 2){
             double kelvin = (fahrenheit - 32) * 5 / 9 + 273.15;
-            System.out.printf("A temperatura em Kelvin é: %.2f",kelvin);
+            System.out.printf("%.2f°F equivalem a %.2fK%n", fahrenheit, kelvin);
         }else{
             System.out.print("Erro, opção inválida!");
         }
     }else if(questao == 18){
         System.out.println("18 - Francisco tem 1,50m e cresce 2 centímetros por ano, enquanto Sara tem 1,10m e cresce 3 centímetros por ano. Faça um algoritmo que calcule e imprima na tela em quantos anos serão necessários para que Francisco seja maior que Sara.");
-        System.out.print("Em manunteção...");
+        double altura_francisco = 1.50;
+        double altura_sara = 1.10;
+        int anos = 0;
+
+        double crescimento_francisco = 0.02;
+        double crescimento_sara = 0.03;
+
+        while (altura_sara <= altura_francisco) {
+            altura_francisco += crescimento_francisco;
+            altura_sara += crescimento_sara;
+            anos++;
+        }
+
+        System.out.println("Serão necessários " + anos + " anos para que Sara seja maior que Francisco.");
+
     }else if(questao == 19){
         System.out.println("As questões 19 e 20 estão juntas!");
         System.out.println("19 - Faça um algoritmo que imprima na tela a tabuada de 1 até 10.\n20 - Faça um algoritmo que receba um valor inteiro e imprima na tela a sua tabuada.");
@@ -321,54 +359,23 @@ public class exercicios {
         System.out.print("Informe a operação abaixo:\n1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n==> ");
         int operacao = input.nextInt();
 
+        for(int i = 1; i <= 10; i++)
         if(operacao == 1){
-            System.out.println(numero+" + 1 = "+ (numero + 1));
-            System.out.println(numero+" + 2 = "+ (numero + 2));
-            System.out.println(numero+" + 3 = "+ (numero + 3));
-            System.out.println(numero+" + 4 = "+ (numero + 4));
-            System.out.println(numero+" + 5 = "+ (numero + 5));
-            System.out.println(numero+" + 6 = "+ (numero + 6));
-            System.out.println(numero+" + 7 = "+ (numero + 7));
-            System.out.println(numero+" + 8 = "+ (numero + 8));
-            System.out.println(numero+" + 9 = "+ (numero + 9));
-            System.out.println(numero+" + 10 = "+ (numero + 10));
+            System.out.println(numero+" + "+i+" = "+(numero + i));
         }else if(operacao == 2){
-            System.out.println(numero+" - 1 = "+ (numero - 1));
-            System.out.println(numero+" - 2 = "+ (numero - 2));
-            System.out.println(numero+" - 3 = "+ (numero - 3));
-            System.out.println(numero+" - 4 = "+ (numero - 4));
-            System.out.println(numero+" - 5 = "+ (numero - 5));
-            System.out.println(numero+" - 6 = "+ (numero - 6));
-            System.out.println(numero+" - 7 = "+ (numero - 7));
-            System.out.println(numero+" - 8 = "+ (numero - 8));
-            System.out.println(numero+" - 9 = "+ (numero - 9));
-            System.out.println(numero+" - 10 = "+ (numero - 10));
+            System.out.println(numero+" - "+i+" = "+(numero - i));
         }else if(operacao == 3){
-            System.out.println(numero+" * 1 = "+ (numero * 1));
-            System.out.println(numero+" * 2 = "+ (numero * 2));
-            System.out.println(numero+" * 3 = "+ (numero * 3));
-            System.out.println(numero+" * 4 = "+ (numero * 4));
-            System.out.println(numero+" * 5 = "+ (numero * 5));
-            System.out.println(numero+" * 6 = "+ (numero * 6));
-            System.out.println(numero+" * 7 = "+ (numero * 7));
-            System.out.println(numero+" * 8 = "+ (numero * 8));
-            System.out.println(numero+" * 9 = "+ (numero * 9));
-            System.out.println(numero+" * 10 = "+ (numero * 10));
+            System.out.println(numero+" * "+i+" = "+(numero * i));
         }else if(operacao == 4){
-            System.out.println(numero+" / 1 = "+ (numero / 1));
-            System.out.println(numero+" / 2 = "+ (numero / 2));
-            System.out.println(numero+" / 3 = "+ (numero / 3));
-            System.out.println(numero+" / 4 = "+ (numero / 4));
-            System.out.println(numero+" / 5 = "+ (numero / 5));
-            System.out.println(numero+" / 6 = "+ (numero / 6));
-            System.out.println(numero+" / 7 = "+ (numero / 7));
-            System.out.println(numero+" / 8 = "+ (numero / 8));
-            System.out.println(numero+" / 9 = "+ (numero / 9));
-            System.out.println(numero+" / 10 = "+ (numero / 10));
+            System.out.println(numero+" / "+i+" = "+(numero / i));
         }
     }else if(questao == 20){
         System.out.println("21 - Faça um algoritmo que mostre um valor aleatório entre 0 e 100.");
-        System.out.println("Em manunteção!");
+        Random gerador = new Random();
+        
+        int numero_aleatorio = gerador.nextInt(100);
+        
+        System.out.print(numero_aleatorio);
     }else if(questao == 21){
         System.out.print("Informe o valor de A: ");
         int valor_a = input.nextInt();
@@ -381,12 +388,27 @@ public class exercicios {
 
         System.out.println("Quociente da divisão de A por B: " + quociente);
         System.out.println("Resto de divisão de A por B: " + resto);
-    }else if(questao == 21){
-        System.out.println("21 - Faça um algoritmo que efetue o cálculo do salário líquido de um professor. As informações fornecidas serão: valor da hora aula, número de aulas lecionadas no mês e percentual de desconto do INSS. Imprima na tela o salário líquido final.");
-        System.out.print("Em manunteção...");
     }else if(questao == 22){
+        System.out.println("21 - Faça um algoritmo que efetue o cálculo do salário líquido de um professor. As informações fornecidas serão: valor da hora aula, número de aulas lecionadas no mês e percentual de desconto do INSS. Imprima na tela o salário líquido final.");
+        System.out.print("Informe o valor por hora aula: ");
+        double horas_aulas = input.nextDouble();
+
+        System.out.print("informe a quantidade de aulas no mês: ");
+        int quantidade_aulas = input.nextInt();
+
+        System.out.print("Qual o valor do seu INSS: ");
+        double inss = input.nextDouble();
+
+        double salario_bruto = horas_aulas * quantidade_aulas;
+
+        double desconto_inss = salario_bruto * inss;
+
+        double salario_liquido = salario_bruto - desconto_inss;
+
+        System.out.printf("O salario liquido foi: %.2f", salario_liquido);
+    }else if(questao == 23){
         System.out.println("22 - Faça um algoritmo que calcule a quantidade de litros de combustível gasto em uma viagem, sabendo que o carro faz 12km com um litro. Deve-se fornecer a usuário o tempo que será gasto na viagem a sua velocidade média, distância percorrida e a quantidade de litros utilizados para fazer a viagem Fórmula: distância = tempo x velocidade.");
-        System.out.print("Informe o tempo gasto na viagem (em horas): ");
+        System.out.print("Informe o tempo gasto na viagem em horas: ");
         double tempo = input.nextDouble();
 
         System.out.print("Informe a velocidade média durante a viagem (em km/h): ");
