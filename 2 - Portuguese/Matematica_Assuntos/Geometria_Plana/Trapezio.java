@@ -1,14 +1,14 @@
-package Matematica_Assuntos.Geometria_Plana;
 import java.util.Scanner;
 
-public class trapezio {
+public class Trapezio {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Informe a formula a seguir:\nA ==> área\nP ==> perimetro\nD ==> diagonal\n==>: ");
-        String formula = input.next().toUpperCase();
+        try{
+        System.out.print("Informe a formula a seguir:\n1 ==> área\n2 ==> perimetro\n3 ==> diagonal\n==>: ");
+        Integer formula = input.nextInt();
 
-        if(formula.equals("A")){
+        if(formula.equals(1)){
             System.out.print("Informe a base maior: ");
             double base_maior = input.nextDouble();
             System.out.print("Informe a base menor: ");
@@ -18,7 +18,7 @@ public class trapezio {
             double area = ((base_maior + base_menor) * altura) / 2.0;
             System.out.printf("A área do trapézio: %.2f",area);
         
-        }else if(formula.equals("P")){
+        }else if(formula.equals(2)){
             System.out.print("Informe a base maior: ");
             double base_maior = input.nextDouble();
             System.out.print("Informe a base menor: ");
@@ -30,7 +30,7 @@ public class trapezio {
             double perimetro = base_maior + base_menor + lado_1 + lado_2;
             System.out.printf("O perimetro do trapézio é: %.2f",perimetro);
         
-        }else if(formula.equals("D")){
+        }else if(formula.equals(3)){
             System.out.print("Informe a base maior: ");
             double base_maior = input.nextDouble();
             System.out.print("Informe a base menor: ");
@@ -40,7 +40,9 @@ public class trapezio {
         }else{
             System.out.print("Erro, formula inválida!!");
         }
+        }catch(Exception e){
+            System.out.print("Só pode número!");
+        }
         input.close();
     }
-    
 }

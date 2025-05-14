@@ -1,15 +1,14 @@
-package Matematica_Assuntos.Geometria_Plana;
 import java.util.Scanner;
-import java.lang.Math;
 
-public class losango {
+public class Losango {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Informe a formula a seguir:\nA ==> área\nP ==> perimetro\nD ==> diagonal\n==>: ");
-        String formula = input.next().toUpperCase();
+        try{
+        System.out.print("Informe a formula a seguir:\n1 ==> área\n2 ==> perimetro\n3 ==> diagonal\n==>: ");
+        Integer formula = input.nextInt();
 
-        if(formula.equals("A")){
+        if(formula.equals(1)){
             System.out.print("Informe a diagonal maior: ");
             double diagonal_maior = input.nextDouble();
             System.out.print("Informe a diagonal menor: ");
@@ -17,13 +16,13 @@ public class losango {
             double area = (diagonal_maior * diagonal_menor) / 2.0;
             System.out.printf("A área do losango é: %.2f",area);
         
-        }else if(formula.equals("P")){
+        }else if(formula.equals(2)){
             System.out.print("informe o lado do losango: ");
             double lado = input.nextDouble();
             double perimetro = 4 * lado;
             System.out.printf("O perimetro do losango é: %.2f",perimetro);
         
-        }else if(formula.equals("D")){
+        }else if(formula.equals(3)){
             System.out.print("Informe a diagonal maior: ");
             double diagonal_maior = input.nextDouble();
             System.out.print("Informe a diagonal menor: ");
@@ -33,7 +32,9 @@ public class losango {
         }else{
             System.out.print("Erro, formula inválida!!");
         }
+        }catch(Exception e){
+            System.out.print("Só pode número!");
+        }
         input.close();
     }
-    
 }

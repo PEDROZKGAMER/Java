@@ -1,21 +1,20 @@
-package Matematica_Assuntos.Geometria_Espacial;
 import java.util.Scanner;
-import java.lang.Math;
 
-public class esfera {
+public class Esfera {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Informe a formula a seguir:\nA ==> área\nV ==> volume\n==>: ");
-        String formula = input.next().toUpperCase();
+        try{
+        System.out.print("Informe a formula a seguir:\n1 ==> área\n2 ==> volume\n==>: ");
+        Integer formula = input.nextInt();
 
-        if(formula.equals("A")){
+        if(formula.equals(1)){
             System.out.print("informe o raio da esfera: ");
             double raio = input.nextDouble();
             double area = 4 * (3.14 * (raio * raio));
             System.out.printf("A área da esfera é: %.2f", area);
         
-        }else if(formula.equals("V")){
+        }else if(formula.equals(2)){
             System.out.print("Informe o raio da esfera: ");
             double raio = input.nextDouble();
             double volume = (4.0 / 3.0) * 3.14 * Math.pow(raio, 3);
@@ -23,7 +22,9 @@ public class esfera {
         }else{
             System.out.print("Erro, formula inválida!!");
         }
+    }catch(Exception e){
+        System.out.print("Só pode número!!");
+    }
         input.close();
     }
-    
 }

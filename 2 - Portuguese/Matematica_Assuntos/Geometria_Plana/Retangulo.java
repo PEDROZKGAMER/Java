@@ -1,15 +1,14 @@
-package Matematica_Assuntos.Geometria_Plana;
 import java.util.Scanner;
-import java.lang.Math;
 
-public class retangulo {
+public class Retangulo {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Informe a formula a seguir:\nA ==> área\nP ==> perimetro\nD ==> diagonal\n==>: ");
-        String formula = input.next().toUpperCase();
+        try{
+        System.out.print("Informe a formula a seguir:\n1 ==> área\n2 ==> perimetro\n3 ==> diagonal\n==>: ");
+        Integer formula = input.nextInt();
 
-        if(formula.equals("A")){
+        if(formula.equals(1)){
             System.out.print("Informe a base do retangulo: ");
             double base = input.nextDouble();
             System.out.print("Informe a altura do retangulo: ");
@@ -17,7 +16,7 @@ public class retangulo {
             double area = base * altura;
             System.out.printf("A área do retangulo é: %.2f",area);
         
-        }else if(formula.equals("P")){
+        }else if(formula.equals(2)){
             System.out.print("Informe a base do retangulo: ");
             double base = input.nextDouble();
             System.out.print("Informe a altura do retangulo: ");
@@ -25,7 +24,7 @@ public class retangulo {
             double perimetro = 2 * (base + altura);
             System.out.printf("O perímetro do retangulo é: %.2f",perimetro);
         
-        }else if(formula.equals("D")){
+        }else if(formula.equals(3)){
             System.out.print("Informe a base do retangulo: ");
             double base = input.nextDouble();
             System.out.print("Informe a altura do retangulo: ");
@@ -34,6 +33,9 @@ public class retangulo {
             System.out.printf("A diagonal do retangulo é: %.2f",diagonal);
         }else{
             System.out.print("Erro, formula inválida!!");
+        }
+        }catch(Exception e){
+            System.out.print("Só pode número!");
         }
         input.close();
     }    

@@ -1,15 +1,14 @@
-package Matematica_Assuntos.Geometria_Espacial;
 import java.util.Scanner;
-import java.lang.Math;
 
-public class troncos {
+public class Troncos {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Informe a formula a seguir:\nTP ==> tronco da piramide\nTC ==> tronco do cone\nTPR ==> tronco do prisma\nTCL ==> tronco do cilindro\n==>: ");
-        String formula = input.next().toUpperCase();
+        try{
+        System.out.print("Informe a formula a seguir:\n1 ==> tronco da piramide\n2 ==> tronco do cone\n3 ==> tronco do prisma\n4 ==> tronco do cilindro\n==>: ");
+        Integer formula = input.nextInt();
 
-        if(formula.equals("TP")){
+        if(formula.equals(1)){
             System.out.print("Informe a altura do tronco da piramide: ");
             double altura = input.nextDouble();
             System.out.print("Informe a base maior: ");
@@ -19,7 +18,7 @@ public class troncos {
             double tronco_piramide = (altura / 3) * (base_maior + base_menor + Math.sqrt((base_maior * base_menor)));
             System.out.printf("O tronco da piramide é: %.2f",tronco_piramide);
          
-        }else if(formula.equals("TC")){
+        }else if(formula.equals(2)){
             System.out.print("Informe a altura do tronco do cone: ");
             double altura = input.nextDouble();
             System.out.print("Informe a raio maior: ");
@@ -29,7 +28,7 @@ public class troncos {
             double tronco_cone = (Math.PI * altura / 3) * (Math.pow(raio_maior, 2) + (raio_maior * raio_menor) + Math.pow(raio_menor, 2));
             System.out.printf("O tronco do cone é: %.2f",tronco_cone);
         
-        }else if(formula.equals("TPR")){
+        }else if(formula.equals(3)){
             System.out.print("Informe a altura do tronco do prisma: ");
             double altura = input.nextDouble();
             System.out.print("Informe a base maior: ");
@@ -39,7 +38,7 @@ public class troncos {
             double tronco_prisma = ((altura * base_maior) + base_menor) / 2.0;
             System.out.printf("O tronco do prisma é: %.2f",tronco_prisma);
         
-        }else if(formula.equals("TCL")){
+        }else if(formula.equals(4)){
             System.out.print("Informe a altura do tronco do cilindro: ");
             double altura = input.nextDouble();
             System.out.print("Informe a raio maior: ");
@@ -51,6 +50,9 @@ public class troncos {
         }else{
             System.out.print("Erro, formula inválida!!");
         }
+    }catch(Exception e){
+        System.out.print("Só pode número!");
+    }
         input.close();
     }
 }

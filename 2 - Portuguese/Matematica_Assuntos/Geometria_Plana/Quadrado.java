@@ -1,9 +1,8 @@
-package Matematica_Assuntos.Geometria_Plana;
-import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
-public class quadrado {
+public class Quadrado {
     // Função para fatorar números em primos
     public static Map<Integer, Integer> fatorarPrimos(int num) {
         Map<Integer, Integer> fatores = new HashMap<>();
@@ -59,22 +58,22 @@ public class quadrado {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Informe a formula a seguir:\nA ==> área\nP ==> perimetro\nD ==> diagonal\n==>: ");
-        String formula = input.next().toUpperCase();
+        System.out.print("Informe a formula a seguir:\n1 ==> área\n2 ==> perimetro\n3 ==> diagonal\n==>: ");
+        Integer formula = input.nextInt();
 
-        if(formula.equals("A")){
+        if(formula.equals(1)){
             System.out.print("Informe o lado do quadrado: ");
             double lado = input.nextDouble();
             double area = lado * lado;
             System.out.printf("A área do quadrado é: %.2f",area);
         
-        }else if(formula.equals("P")){
+        }else if(formula.equals(2)){
             System.out.print("Informe o lado do quadrado: ");
             double lado = input.nextDouble();
             double perimetro = 4 * lado;
             System.out.printf("O perímetro do quadrado é: %.2f",perimetro);
         
-        }else if(formula.equals("D")){
+        }else if(formula.equals(3)){
             System.out.print("Informe o lado do quadrado: ");
             int lado = input.nextInt();
             String diagonal = calcularDiagonal(lado);
@@ -84,5 +83,4 @@ public class quadrado {
         }
         input.close();
     }
-    
 }

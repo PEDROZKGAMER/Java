@@ -1,7 +1,7 @@
 package projetos_simples;
 import java.util.Scanner;
 
-public class calculadora {
+public class calculadora1_0 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
