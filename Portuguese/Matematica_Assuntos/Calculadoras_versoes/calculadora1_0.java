@@ -1,4 +1,4 @@
-package projetos_simples;
+package portuguese.matematica_assuntos.calculadoras_versoes;
 import java.util.Scanner;
 
 public class calculadora1_0 {

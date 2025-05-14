@@ -1,3 +1,5 @@
+package portuguese.matematica_assuntos.calculadoras_versoes;
+
 import java.util.Scanner;
 public class calculadora3_0 {
     public static void main(String[] args) {

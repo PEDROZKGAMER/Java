@@ -1,3 +1,4 @@
+package portuguese.matematica_assuntos.calculadoras_versoes;
 import java.util.Scanner;
 
 public class Calculadora_finalizada {

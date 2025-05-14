@@ -1,4 +1,4 @@
-package herança.animais;
+package poo.herança.animais;
 
 public class cachorro extends animal{
     public void lamber(){

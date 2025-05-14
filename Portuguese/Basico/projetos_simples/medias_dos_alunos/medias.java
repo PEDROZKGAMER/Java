@@ -1,4 +1,4 @@
-package projetos_simples;
+package portuguese.basico.projetos_simples.medias_dos_alunos;
 import java.util.Scanner;
 
 public class medias {

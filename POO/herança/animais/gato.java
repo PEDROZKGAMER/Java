@@ -1,4 +1,4 @@
-package herança.animais;
+package poo.herança.animais;
 
 public class gato extends animal{
     public void miou(){

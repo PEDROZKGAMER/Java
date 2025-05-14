@@ -1,4 +1,4 @@
-package Abstrato;
+package poo.abstrato;
 
 public abstract class forma_geometrica {
     public abstract double calcularArea();

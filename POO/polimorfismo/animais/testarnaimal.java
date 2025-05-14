@@ -1,4 +1,4 @@
-package polimorfismo.animais;
+package poo.polimorfismo.animais;
 
 public class testarnaimal {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package pilhas;
+package poo.pilhas;
 import java.util.Stack;
 
 public class teste_pilha1 {

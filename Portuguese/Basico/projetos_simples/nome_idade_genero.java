@@ -1,4 +1,4 @@
-package projetos_simples;
+package portuguese.basico.projetos_simples;
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;

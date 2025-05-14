@@ -1,4 +1,4 @@
-package Abstrato;
+package poo.abstrato;
 
 public class testar_formula {
     public static void main(String[] args) {

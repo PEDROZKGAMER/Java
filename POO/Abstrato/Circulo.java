@@ -1,4 +1,4 @@
-package Abstrato;
+package poo.abstrato;
 
 public class Circulo extends forma_geometrica{
     private double raio;

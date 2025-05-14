@@ -1,4 +1,4 @@
-package projetos_simples;
+package portuguese.basico.projetos_simples.maior_de_idades;
 import java.util.Scanner;
 
 public class pode_votar_ou_nao {

@@ -1,4 +1,4 @@
-package projetos_simples;
+package portuguese.basico.projetos_simples.tabuadas;
 import java.util.Scanner;
 
 public class tabuada {

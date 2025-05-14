@@ -1,6 +1,6 @@
-package encapsulamento.pessoa;
+package poo.encapsulamento.pessoa;
 
-public class Pessoa {
+public class pessoa {
     private String nome;
 	    private int idade;
         

@@ -1,4 +1,4 @@
-package herança.animais;
+package poo.herança.animais;
 
 public class testaranimal extends animal{
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package projetos_simples;
+package portuguese.basico.projetos_simples;
 public class primeiro_projeto {
 
 	public static void main(String[] args) {

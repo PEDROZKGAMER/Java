@@ -1,4 +1,4 @@
-package polimorfismo.animais;
+package poo.polimorfismo.animais;
 
 public class gato extends Animal{
     @Override
