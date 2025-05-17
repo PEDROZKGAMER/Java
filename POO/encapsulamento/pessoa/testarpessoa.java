@@ -2,7 +2,7 @@ package poo.encapsulamento.pessoa;
 
 public class testarpessoa {
     public static void main(String[] args) {
-        Pessoa pessoa = new Pessoa();
+        pessoa pessoa = new pessoa();
 
         pessoa.setnome("Pedro");
         pessoa.setidade(18);
