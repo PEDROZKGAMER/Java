@@ -100,6 +100,7 @@ public class cadastro_produto {
                     }
                 
             }
+            input.close();
         }
     }
 }
